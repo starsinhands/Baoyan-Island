@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			.xitong{
+				/* width: 200px; */
+				margin-top:10px;
+				margin-left:10px;
+				margin-bottom:8px;
+				height: 50px;
+				background-image: url(img/logo.png);
+				background-repeat:no-repeat;
+				background-size:contain;
+			}
+			.exit{
+				border: 1px solid rgb(15,89,164);
+				font-size: 20px;
+				/* width: 150px; */
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				border-radius: 20px;
+				color: rgb(15,89,164);
+				background-color: #F59A43;
+				transition: 2s;
+				padding: 1px 50px;
+				float:right;
+				margin-right:20px;
+			}
+			.exit:hover{
+				color: white;
+				background-color: rgb(15,89,164);
+				box-shadow: 2px 2px 10px #f96520,
+				-2px 2px 10px #D1F276,
+				2px -2px 10px #D1F276,
+				-2px -2px 10px #D1F276;
+			}
+			.left{
+				width: 200px;
+				height: 800px;
+				border: 1px solid rgb(15,89,164);
+				float: left;
+				background-color: rgb(15,89,164);
+			}
+			.right{
+				width:1150px;
+				height:700px;
+				margin-left:60px;
+				margin-top:50px;
+				/* border: 1px solid red; */
+				float: left;
+			}
+			.title{
+				list-style-type: none;
+				width: 200px;
+				height: 55px;
+				line-height: 55px;
+				border: 1px dashed black;
+				text-align: center;
+			}
+			a{
+				color: black;
+				text-decoration: none;
+				font-family: "微软雅黑";
+				font-weight: bold;
+				font-size: 20px;
+			}
+			.first{
+				margin-top:50px;
+			}
+			.first>li{
+				background-color: ghostwhite;
+			}
+			.first>li:hover{
+				background-color: skyblue;
+			}
+			.first>li a:hover{
+				color: white;
+			}
+			p{
+				font-size:25px;
+				margin-top:14px;
+				color:rgb(15,89,164);
+			}
+			.next{
+				border: 1px solid rgb(15,89,164);
+				font-size: 20px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				color: rgb(15,89,164);
+				background-color: #F59A43;
+				transition: 2s;
+				padding: 1px 50px;
+				margin-right:100px;
+			}
+			table{
+				border-collapse:collapse;
+				width:100%;
+			}
+			th,td{
+				padding:8px;
+				text-align:center;
+				border-bottom:1px solid #ddd;
+			}
+			.dialog-container{
+				display: none;
+				position: fixed;
+				z-index: 1;
+				padding-top: 100px;
+				left: 5;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+			.dialog-content {
+				background-color: #fefefe;
+				margin: auto;
+				padding: 20px;
+				border: 1px solid #888;
+				width: 80%;
+			}
+			.dialog-content input[type="text"]{
+				width: 100%;
+				padding: 8px;
+				margin-bottom: 10px;
+			}
+			.dialog-content button {
+				background-color: #4CAF50;
+				color: white;
+				padding: 8px 16px;
+				border: none;
+				cursor: pointer;
+			}
+			.dialog-content button.cancel {
+				background-color: #ccc;
+			}
+		</style>
+		<script src="js/mytable3.js"></script>
+	</head>
+	<body>
+		<div class="xitong">
+			<span style="margin-left: 50px;font-size: 34px;font-family: '华文新魏';font-weight: bold;height: 50px;line-height: 50px;color:rgb(15,89,164);">保研岸 | </span>
+			<span style="font-size: 29px;font-family: '幼圆';font-weight: bold;height: 50px;line-height: 50px;">模拟夏令营预申请与资格审查系统</span>
+			<a href="log.html" class="exit" style="text-decoration:none;">退&nbsp;&nbsp;&nbsp;出</a>
+			<a href="xialingyingshouye.html" class="exit" style="text-decoration:none;">夏令营首页</a>
+		</div>
+		<hr style="background-color:rgb(15,89,164);height:5px;border:none;">
+		<div class="left">
+			<ul class="first">
+				<li class="title"><a href="sqxz.html">申请须知</a></li>
+				<li class="title"><a href="personalinf.html">个人信息</a></li>
+				<li class="title"><a href="educationback.html">教育背景</a></li>
+				<li class="title" style="background-color:lightblue;"><a href="personalstate.html">个人陈述</a></li>
+				<li class="title"><a href="dataupload.html">资料上传</a></li>
+				<li class="title"><a href="recommend.html">推荐信</a></li>
+				<li class="title"><a href="promise.html">诚信承诺</a></li>
+				<li class="title"><a href="submit.html">提交申请</a></li>
+			</ul>
+		</div>
+		<div class="right">
+			(*本系统为夏令营模拟系统，部分涉及个人隐私的信息可模糊填写)<br><br>
+			<p align="center" style="margin-bottom:15px;">申请人自述</p>
+			请用不超过1000字就选择该专业的原因和优势、选择该大学该学院的理由以及研究生/博士阶段主要努力的方向和毕业后的设想进行简要的回答：
+			<td><textarea rows="10" cols="160" style="margin-top:15px;margin-left:10px;"></textarea></td>
+			<p align="center" style="margin-bottom:15px;">荣誉和奖励</p>
+			请列出曾获得的荣誉和奖励
+			<table id="memberTable">
+				<tr>
+					<th>荣誉和奖励</th>
+					<th>获得时间</th>
+					<th>组织单位</th>
+					<th>简要说明</th>
+					<th>操作</th>
+				</tr>
+			</table>
+			<div class="dialog-container" id="dialogContainer">
+				<div class="dialog-content">
+					<label for="ryhjl">荣誉和奖励：</label>
+					<input type="text" id="ryhjl"><br>
+			
+					<label for="hdsj">获得时间：</label>
+					<input type="text" id="hdsj"><br>
+			
+					<label for="zzdw">组织单位：</label>
+					<input type="text" id="zzdw"><br>
+			
+					<label for="jysm">简要说明：</label>
+					<input type="text" id="jysm"><br>
+					
+					<button onclick="saveData()">确定</button>
+					<button onclick="cancelDialog()" class="cancel">取消</button>
+				</div>
+			</div>
+			<div style="display: flex; justify-content: center;margin-top:22px;">
+				<button onclick="openDialog()" style="display: flex; justify-content: center;">
+					添加荣誉/奖励
+				</button>
+			</div>
+			<br>
+			
+			
+			<p align="center" style="margin-bottom:15px;">科研成果与著作</p>
+			请列出曾发表的学术论文或著作信息，包括发表时间、发表期刊或出版社等。
+			<table id="achievementTable">
+				<tr>
+					<th>名称</th>
+					<th>发表时间</th>
+					<th>发表情况</th>
+					<th>论文题目</th>
+					<th>第几作者</th>
+					<th>操作</th>
+				</tr>
+			</table>
+			<div class="dialog-container" id="achievementDialogContainer">
+				<div class="dialog-content">
+					<label for="mc">名称：</label>
+					<input type="text" id="mc"><br>
+			
+					<label for="fbsj">发表时间：</label>
+					<input type="text" id="fbsj"><br>
+			
+					<label for="fbqk">发表情况：</label>
+					<input type="text" id="fbqk"><br>
+			
+					<label for="lwtm">论文题目：</label>
+					<input type="text" id="lwtm"><br>
+					
+					<label for="djzz">第几作者：</label>
+					<input type="text" id="djzz"><br>
+					
+					<button onclick="saveAchievementData()">确定</button>
+					<button onclick="cancelAchievementDialog()" class="cancel">取消</button>
+				</div>
+			</div>
+			<div style="display: flex; justify-content: center;margin-top:22px;">
+				<button onclick="openAchievementDialog()" style="display: flex; justify-content: center;">
+					科研成果与著作
+				</button>
+			</div>
+			<br>
+			<!-- <p align="center" style="margin-bottom:15px;">语言水平</p>
+			请列出曾考试过的语言水平成绩。
+			<p align="center" style="margin-bottom:15px;">计算机水平</p>
+			请列出计算机水平。
+			<p align="center" style="margin-bottom:15px;">主要学习情况</p>
+			请列出主要学习情况。
+			<p align="center" style="margin-bottom:15px;">计算机水平</p>
+			请列出计算机水平。
+			<p align="center" style="margin-bottom:15px;">主要学习情况</p>
+			请列出主要学习情况。
+			<p align="center" style="margin-bottom:15px;">主要社会工作情况</p>
+			请列出主要社会工作情况。
+			<p align="center" style="margin-bottom:15px;">海外经历</p>
+			请列出海外经历。
+			<p align="center" style="margin-bottom:15px;">文体特长</p>
+			请列出文体特长。
+			<br>
+			<tr>
+				<td>是否同时申请其他院校的项目？</td>
+				<td>
+					<input type="radio" name="sex">是&nbsp;
+					<input type="radio" name="sex">否
+				</td>
+			</tr>
+			<p align="center">其他院校申请</p>
+			请列出海外经历。 -->
+			<a href="educationback.html" class="next" style="text-decoration:none;">上一步</a>
+			<a href="#" class="next" style="text-decoration:none;">保存</a>
+			<a href="dataupload.html" class="next" style="text-decoration:none;">下一步</a>
+		</div>
+	</body>
+</html>

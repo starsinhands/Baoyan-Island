@@ -1,0 +1,47 @@
+*{
+	font-family: "微软雅黑";
+	font-size: 18px;
+}
+table{
+	margin-top: 150px;
+}
+tr{
+	height: 50px;
+}
+a{
+	text-decoration: none;
+}
+#reg,#login{
+	background-color: darkgreen;
+	border-radius: 10px;
+	box-shadow: 1px 1px 2px 2px #232;
+}
+#username{
+	background-image: url(../img/user.jpg);
+	background-repeat: no-repeat;
+	background-position-x: 5px;
+	background-position-y: 5px;
+	height: 35px;
+	padding-left: 35px;
+	border: 1px solid #ccc;
+	outline: none;
+}
+#username:hover{
+	border: 1px solid #8a2be2;
+}
+#password,#repassword{
+	background-image: url(../img/password.jpg);
+	background-repeat: no-repeat;
+	background-position-x: 5px;
+	background-position-y: 5px;
+	height: 35px;
+	padding-left: 35px;
+	border: 1px solid #ccc;
+	outline: none;
+}
+#password:hover{
+	border: 1px solid #8a2be2;
+}
+#repassword:hover{
+	border: 1px solid #8a2be2;
+}

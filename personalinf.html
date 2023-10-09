@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/mytable.js"></script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			input::-webkit-input-placeholder{
+				font-size:20px;
+			}
+			input::-moz-input-placeholder{
+				font-size:20px;
+			}
+			input::-ms-input-placeholder{
+				font-size:20px;
+			}
+			.xitong{
+				/* width: 200px; */
+				margin-top:10px;
+				margin-left:10px;
+				margin-bottom:8px;
+				height: 50px;
+				background-image: url(img/logo.png);
+				background-repeat:no-repeat;
+				background-size:contain;
+			}
+			.exit{
+				border: 1px solid rgb(15,89,164);
+				font-size: 20px;
+				/* width: 150px; */
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				border-radius: 20px;
+				color: rgb(15,89,164);
+				background-color: #F59A43;
+				transition: 2s;
+				padding: 1px 50px;
+				float:right;
+				margin-right:20px;
+			}
+			.exit:hover{
+				color: white;
+				background-color: rgb(15,89,164);
+				box-shadow: 2px 2px 10px #f96520,
+				-2px 2px 10px #D1F276,
+				2px -2px 10px #D1F276,
+				-2px -2px 10px #D1F276;
+			}
+			.left{
+				width: 200px;
+				height: 1500px;
+				border: 1px solid rgb(15,89,164);
+				float: left;
+				background-color: rgb(15,89,164);
+			}
+			.right{
+				width:1150px;
+				height:1200px;
+				margin-left:60px;
+				margin-top:50px;
+				/* border: 1px solid red; */
+				float: left;
+			}
+			.title{
+				list-style-type: none;
+				width: 200px;
+				height: 55px;
+				line-height: 55px;
+				border: 1px dashed black;
+				text-align: center;
+			}
+			a{
+				color: black;
+				text-decoration: none;
+				font-family: "微软雅黑";
+				font-weight: bold;
+				font-size: 20px;
+			}
+			.first{
+				margin-top:50px;
+			}
+			.first>li{
+				background-color: ghostwhite;
+			}
+			.first>li:hover{
+				background-color: skyblue;
+			}
+			.first>li a:hover{
+				color: white;
+			}
+			.next{
+				border: 1px solid rgb(15,89,164);
+				font-size: 20px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				color: rgb(15,89,164);
+				background-color: #F59A43;
+				transition: 2s;
+				padding: 1px 50px;
+				margin-right:100px;
+			}
+			table{
+				border-collapse:collapse;
+				width:100%;
+			}
+			th,td{
+				padding:8px;
+				text-align:center;
+				border-bottom:1px solid #ddd;
+			}
+			.dialog-container{
+				display: none;
+				position: fixed;
+				z-index: 1;
+				padding-top: 100px;
+				left: 5;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+			.dialog-content {
+				background-color: #fefefe;
+				margin: auto;
+				padding: 20px;
+				border: 1px solid #888;
+				width: 80%;
+			}
+			.dialog-content input[type="text"]{
+				width: 100%;
+				padding: 8px;
+				margin-bottom: 10px;
+			}
+			.dialog-content button {
+				background-color: #4CAF50;
+				color: white;
+				padding: 8px 16px;
+				border: none;
+				cursor: pointer;
+			}
+			.dialog-content button.cancel {
+				background-color: #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="xitong">
+			<span style="margin-left: 50px;font-size: 34px;font-family: '华文新魏';font-weight: bold;height: 50px;line-height: 50px;color:rgb(15,89,164);">保研岸 | </span>
+			<span style="font-size: 29px;font-family: '幼圆';font-weight: bold;height: 50px;line-height: 50px;">模拟夏令营预申请与资格审查系统</span>
+			<a href="log.html" class="exit" style="text-decoration:none;">退&nbsp;&nbsp;&nbsp;出</a>
+			<a href="xialingyingshouye.html" class="exit" style="text-decoration:none;">夏令营首页</a>
+		</div>
+		<hr style="background-color:rgb(15,89,164);height:5px;border:none;">
+		<div class="left">
+			<ul class="first">
+				<li class="title"><a href="sqxz.html">申请须知</a></li>
+				<li class="title" style="background-color:lightblue;"><a href="personalinf.html">个人信息</a></li>
+				<li class="title"><a href="educationback.html">教育背景</a></li>
+				<li class="title"><a href="personalstate.html">个人陈述</a></li>
+				<li class="title"><a href="dataupload.html">资料上传</a></li>
+				<li class="title"><a href="recommend.html">推荐信</a></li>
+				<li class="title"><a href="promise.html">诚信承诺</a></li>
+				<li class="title"><a href="submit.html">提交申请</a></li>
+			</ul>
+		</div>
+		<div class="right">
+			(*本系统为夏令营模拟系统，部分涉及个人隐私的信息可模糊填写)<br><br>
+			<table style="font-size:20px;height:1200px;width:1000px;margin-left:10px;">
+				<tr>
+					<td>中文姓名：</td>
+					<td>
+						<input type="text" placeholder="请输入真实姓名" style="height:25px;">
+					</td>
+				</tr>
+				<tr>
+					<td>性别：</td>
+					<td>
+						<input type="radio" name="sex" value="男" checked="checked">男&nbsp;
+						<input type="radio" name="sex" value="女">女
+					</td>
+				</tr>
+				<tr>
+					<td>姓（拼音）：</td>
+					<td>
+						<input type="text" placeholder="请输入姓(拼音)" style="height:25px;">
+					</td>
+				</tr>
+				<tr>
+					<td>名（拼音）：</td>
+					<td>
+						<input type="text" placeholder="请输入名(拼音)" style="height:25px;">
+					</td>
+				</tr>
+				<tr>
+					<td>申请院校：</td>
+					<td>
+						<select>
+							<optgroup>
+								<option label="请选择大学" style="height:25px;"></option>
+								<option>中山大学</option>
+								<option>浙江大学</option>
+							</optgroup>
+						</select>
+						<select>
+							<optgroup>
+								<option label="请选择学院"></option>
+								<option>计算机学院</option>
+								<option>软件学院</option>
+							</optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>申请学科与专业：</td>
+					<td>
+						<select>
+							<optgroup>
+								<option label="请选择大类"></option>
+								<option>0775计算机科学与技术</option>
+							</optgroup>
+						</select>
+						<select>
+							<optgroup>
+								<option label="请选择专业"></option>
+								<option>软件工程</option>
+							</optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>上传照片：</td>
+					<td>
+						<input type="file">
+					</td>
+				</tr>
+				<tr>
+					<td>身份证件：</td>
+					<td>
+						<select>
+							<optgroup>
+								<option>大陆居民身份证</option>
+								<option>港澳台</option>
+							</optgroup>
+						</select>
+						
+							<input type="text" width="20" style="height:25px;">
+						
+					</td>
+				</tr>
+				<tr>
+					<td>出生日期：</td>
+					<td><input type="date" style="height:25px;"></td>
+				</tr>
+				<tr>
+					<td>籍贯：</td>
+					<td>
+						<select name="address">
+							<optgroup>
+								<option label="请选择省份"></option>
+								<option>广东省</option>
+								<option>江西省</option>
+							</optgroup>
+						</select>
+						<select>
+							<optgroup>
+								<option label="请选择城市"></option>
+								<option>广州市</option>
+								<option>佛山市</option>
+								<option>南昌市</option>
+								<option>九江市</option>
+							</optgroup>
+						</select>
+						<select>
+							<outgroup>
+								<option label="请选择区"></option>
+								<option>白云区</option>
+								<option>天河区</option>
+								<option>禅城区</option>
+								<option>南海区</option>
+								<option>东湖区</option>
+								<option>西湖区</option>
+								<option>浔阳区</option>
+								<option>柴桑区</option>
+							</outgroup>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>政治面貌：</td>
+					<td>
+						<input type="text" placeholder="请输入政治面貌" style="height:25px;">
+					</td>
+				</tr>
+				<tr>
+					<td>手机：</td>
+					<td>
+						<input type="text" placeholder="请输入手机号" style="height:25px;">
+					</td>
+				</tr>
+				<tr>
+					<td>邮箱：</td>
+					<td>
+						<input type="email" placeholder="请输入邮箱地址" style="height:25px;">
+					</td>
+				</tr>
+				<tr>
+					<td>通讯地址地区：</td>
+					<td>
+						<select>
+							<optgroup>
+								<option label="请选择省份"></option>
+								<option>广东省</option>
+								<option>江西省</option>
+							</optgroup>
+						</select>
+						<select>
+							<optgroup>
+								<option label="请选择城市"></option>
+								<option>广州市</option>
+								<option>佛山市</option>
+								<option>南昌市</option>
+								<option>九江市</option>
+							</optgroup>
+						</select>
+						<select>
+							<outgroup>
+								<option label="请选择区"></option>
+								<option>白云区</option>
+								<option>天河区</option>
+								<option>禅城区</option>
+								<option>南海区</option>
+								<option>东湖区</option>
+								<option>西湖区</option>
+								<option>浔阳区</option>
+								<option>柴桑区</option>
+							</outgroup>
+						</select>
+							<input type="text">
+					</td>
+				</tr>
+				<tr>
+					<td>邮政编码：</td>
+					<td>
+						<input type="text" placeholder="请输入邮政编码" style="height:25px;">
+					</td>
+				</tr>
+				<tr>
+					<td>户籍所在地：</td>
+					<td>
+						<select name="address">
+							<optgroup>
+								<option label="请选择省份"></option>
+								<option>广东省</option>
+								<option>江西省</option>
+							</optgroup>
+						</select>
+						<select>
+							<optgroup>
+								<option label="请选择城市"></option>
+								<option>广州市</option>
+								<option>佛山市</option>
+								<option>南昌市</option>
+								<option>九江市</option>
+							</optgroup>
+						</select>
+						<select>
+							<outgroup>
+								<option label="请选择区"></option>
+								<option>白云区</option>
+								<option>天河区</option>
+								<option>禅城区</option>
+								<option>南海区</option>
+								<option>东湖区</option>
+								<option>西湖区</option>
+								<option>浔阳区</option>
+								<option>柴桑区</option>
+							</outgroup>
+						</select>
+							<input type="text" style="height:25px;">
+					</td>
+				</tr>
+				<tr>
+					<td>紧急联系人姓名：</td>
+					<td>
+						<input type="text" style="height:25px;">
+						<input type="checkbox" name="family">父亲&nbsp;
+						<input type="checkbox">母亲&nbsp;
+						<input type="checkbox">兄妹
+					</td>
+				</tr>
+				<tr>
+					<td>紧急联系人手机：</td>
+					<td>
+						<input type="text" placeholder="请输入手机号" style="height:25px;">
+					</td>
+				</tr>
+				<tr>
+					<td>可添加家庭成员：</td>
+					<td></td>
+			</table>
+			<table id="memberTable">
+				<tr>
+					<th>关系</th>
+					<th>姓名</th>
+					<th>工作单位（含退休前单位）</th>
+					<th>工作职务</th>
+					<th>操作</th>
+				</tr>
+			</table>
+			<div class="dialog-container" id="dialogContainer">
+				<div class="dialog-content">
+					<label for="relation">关系:</label>
+					<input type="text" id="relation"><br>
+			
+					<label for="name">姓名:</label>
+					<input type="text" id="name"><br>
+			
+					<label for="workUnit">工作单位（含退休前单位）:</label>
+					<input type="text" id="workUnit"><br>
+			
+					<label for="position">工作职务:</label>
+					<input type="text" id="position"><br>
+			
+					<button onclick="saveData()">确定</button>
+					<button onclick="cancelDialog()" class="cancel">取消</button>
+				</div>
+			</div>
+			<div style="display: flex; justify-content: center;margin-top:22px;">
+				<button onclick="openDialog()" style="display: flex; justify-content: center;">
+					添加家庭成员
+				</button>
+			</div>
+			<br>
+			<a href="sqxz.html" class="next" style="text-decoration:none;">上一步</a>
+			<a href="#" class="next" style="text-decoration:none;">保存</a>
+			<a href="educationback.html" class="next" style="text-decoration:none;">下一步</a>
+		</div>
+	</body>
+</html>

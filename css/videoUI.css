@@ -1,0 +1,142 @@
+.myVideo{
+	margin:50px auto 5px;
+	width:820px;
+}
+.box{
+	margin:0 auto;
+	width: 600px;
+	height: 40px;
+	background-color: #ff0000;
+	border-radius: 10px;
+	box-shadow: 1px 1px 2px 2px #232;
+	border: 1px solid #ff0000;
+}
+.play{
+	float: left;
+	width: 0;
+	height: 0;
+	border-left: 15px solid #fff;
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	margin-top: 8px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.pause{
+	width: 8px;
+	height: 20px;
+	border-left: 4px solid #fff;
+	border-right: 4px solid #fff;
+	float: left;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.progress{
+	width: 400px;
+	height: 8px;
+	background-color: #fff;
+	float: left;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	margin-top: 16px;
+	margin-left: 10px;
+	box-shadow: 1px 1px 2px 2px #132;
+	position: relative;
+}
+.bar{
+	width: 0%;
+	height: 100%;
+	background-color: #ccc;
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	left: 0;
+	/* border: 1px solid #fff; */
+	border-radius: 5px;
+	/* box-shadow: 1px 1px 2px 2px #132; */
+}
+.control{
+	width: 18px;
+	height: 18px;
+	background-color: #fff;
+	border-radius: 100%;
+	position: absolute;
+	left: 0;
+	top: -5px;
+	box-shadow: 1px 1px 2px 2px #132;
+}
+.soundon{
+	width: 10px;
+	height: 8px;
+	border-right: 15px solid #fff;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	float: left;
+	margin-top: 8px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+.soundoff{
+	width: 10px;
+	height: 8px;
+	border-right: 15px solid #ccc;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	float: left;
+	margin-top: 8px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+.volume{
+	width: 60px;
+	height: 8px;
+	background-color: #fff;
+	float: left;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	margin-top: 16px;
+	margin-left: 10px;
+	box-shadow: 1px 1px 2px 2px #132;
+	position: relative;
+}
+.volume-bar{
+	width: 30%;
+	height: 100%;
+	background-color: #ccc;
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	left: 0;
+	/* border: 1px solid #fff; */
+	border-radius: 5px;
+	/* box-shadow: 1px 1px 2px 2px #132; */
+}
+.volume-control{
+	width: 15px;
+	height: 15px;
+	background-color: #fff;
+	border-radius: 100%;
+	position: absolute;
+	left: 0;
+	top:-3px;
+	box-shadow: 1px 1px 2px 2px #132;
+}
+.full{
+	width: 15px;
+	height: 15px;
+	border: 3px solid #fff;
+	float: left;
+	margin-top: 12px;
+	margin-left: 15px;
+	transition-property: all;
+	transition-duration: 0.5s;
+}
+.full:hover{
+	width: 20px;
+	height: 20px;
+	border: 3px solid #ccc;
+	float: left;
+	margin-top: 10px;
+	margin-left: 12px;
+}

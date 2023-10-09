@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/loginCss.css">
+		<script src="js/myjs.js"></script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			body,html{
+				height:100%;
+				/* overflow:hidden; */
+			}
+			.fourpic{
+				display: flex;
+				height:100%;
+			}
+			.pic{
+				flex:1;
+				background-size:cover;
+				background-position:center center;
+				background-repeat:no-repeat;
+				opacity: 0.4;
+				position: relative;
+			}
+			.pic::after{
+				content:"";
+				position: absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				background-color:rgba(255,70,70,0.5);
+			}
+			.pic:nth-child(1){
+				background-image:url(img/thu.png);
+			}
+			.pic:nth-child(2){
+				background-image:url(img/pku.png);
+			}
+			.pic:nth-child(3){
+				background-image:url(img/fdu.jpg);
+			}
+			.pic:nth-child(4){
+				background-image:url(img/sjtu.png);
+			}
+			.content{
+				position:absolute;
+				top:15%;
+				left:24%;
+				/* transform:translate(-50%,50%); */
+				color:white;
+				text-align:center;
+			}
+			.content p{
+				font-size:18px;
+				margin-bottom:8px;
+			}
+			.xitong{
+				/* width: 200px; */
+				height: 150px;
+				background-image: url(img/logo.png);
+				background-repeat:no-repeat;
+				background-size:contain;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="fourpic">
+			<div class="pic"></div>
+			<div class="pic"></div>
+			<div class="pic"></div>
+			<div class="pic"></div>
+		</div>
+		<div class="content">
+			<div class="xitong">
+				<span style="margin-left: 170px;font-size: 54px;font-family: '华文新魏';font-weight: bold;height: 150px;line-height: 150px; text-shadow: -2px 3px 4px red;">保研岸 | </span>
+				<span style="font-size: 49px;font-family: '幼圆';font-weight: bold;height: 150px;line-height: 150px; text-shadow: -2px 3px 4px red;">推免招生模拟系统</span>
+			</div>
+			<table align="center" cellpadding="5px" style="margin-top:50px;margin-bottom:140px;margin-left:173px;">
+				<tr>
+					<td>&nbsp;</td>
+					<td align="center">
+						用 户 注 册
+					</td>
+				</tr>
+				<tr>
+					<td align="right">用户名:&nbsp;&nbsp;&nbsp;</td>
+					<td>
+						<input type="text" id="username" autocomplete="off" placeholder="请输入用户名">
+					</td>
+				</tr>
+				<tr>
+					<td align="right">密&nbsp;&nbsp;码:&nbsp;&nbsp;&nbsp;</td>
+					<td>
+						<input type="password" id="password" placeholder="请输入密码">
+					</td>
+				</tr>
+				<tr>
+					<td align="right">确认密码:&nbsp;&nbsp;&nbsp;</td>
+					<td>
+						<input type="password" id="repassword" placeholder="请确认密码">
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td>
+						<input type="button" value=" 注  册 " id="reg" onclick="reg()">&nbsp;&nbsp;&nbsp;
+						<a href="log.html">登录</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

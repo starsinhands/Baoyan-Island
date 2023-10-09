@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/mytable4.js"></script>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			.xitong{
+				/* width: 200px; */
+				margin-top:10px;
+				margin-left:10px;
+				margin-bottom:8px;
+				height: 50px;
+				background-image: url(img/logo.png);
+				background-repeat:no-repeat;
+				background-size:contain;
+			}
+			.exit{
+				border: 1px solid rgb(15,89,164);
+				font-size: 20px;
+				/* width: 150px; */
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				border-radius: 20px;
+				color: rgb(15,89,164);
+				background-color: #F59A43;
+				transition: 2s;
+				padding: 1px 50px;
+				float:right;
+				margin-right:20px;
+			}
+			.exit:hover{
+				color: white;
+				background-color: rgb(15,89,164);
+				box-shadow: 2px 2px 10px #f96520,
+				-2px 2px 10px #D1F276,
+				2px -2px 10px #D1F276,
+				-2px -2px 10px #D1F276;
+			}
+			.left{
+				width: 200px;
+				height: 700px;
+				border: 1px solid rgb(15,89,164);
+				float: left;
+				background-color: rgb(15,89,164);
+			}
+			.right{
+				width:1150px;
+				height:600px;
+				margin-left:60px;
+				margin-top:50px;
+				/* border: 1px solid red; */
+				float: left;
+			}
+			.title{
+				list-style-type: none;
+				width: 200px;
+				height: 55px;
+				line-height: 55px;
+				border: 1px dashed black;
+				text-align: center;
+			}
+			a{
+				color: black;
+				text-decoration: none;
+				font-family: "微软雅黑";
+				font-weight: bold;
+				font-size: 20px;
+			}
+			.first{
+				margin-top:50px;
+			}
+			.first>li{
+				background-color: ghostwhite;
+			}
+			.first>li:hover{
+				background-color: skyblue;
+			}
+			.first>li a:hover{
+				color: white;
+			}
+			p{
+				font-size:18px;
+				margin-top:14px;
+			}
+			.next{
+				border: 1px solid rgb(15,89,164);
+				font-size: 20px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				color: rgb(15,89,164);
+				background-color: #F59A43;
+				transition: 2s;
+				padding: 1px 50px;
+				margin-right:100px;
+			}
+			.rectangle-bg{
+				background-color:#f2f2f2;
+				margin-left:10px;
+				margin-bottom:10px;
+			}
+			table{
+				border-collapse:collapse;
+				width:100%;
+			}
+			th,td{
+				padding:8px;
+				text-align:center;
+				border-bottom:1px solid #ddd;
+			}
+			.dialog-container{
+				display: none;
+				position: fixed;
+				z-index: 1;
+				padding-top: 100px;
+				left: 5;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+			.dialog-content {
+				background-color: #fefefe;
+				margin: auto;
+				padding: 20px;
+				border: 1px solid #888;
+				width: 80%;
+			}
+			.dialog-content input[type="text"]{
+				width: 100%;
+				padding: 8px;
+				margin-bottom: 10px;
+			}
+			.dialog-content button {
+				background-color: #4CAF50;
+				color: white;
+				padding: 8px 16px;
+				border: none;
+				cursor: pointer;
+			}
+			.dialog-content button.cancel {
+				background-color: #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="xitong">
+			<span style="margin-left: 50px;font-size: 34px;font-family: '华文新魏';font-weight: bold;height: 50px;line-height: 50px;color:rgb(15,89,164);">保研岸 | </span>
+			<span style="font-size: 29px;font-family: '幼圆';font-weight: bold;height: 50px;line-height: 50px;">模拟夏令营预申请与资格审查系统</span>
+			<a href="log.html" class="exit" style="text-decoration:none;">退&nbsp;&nbsp;&nbsp;出</a>
+			<a href="xialingyingshouye.html" class="exit" style="text-decoration:none;">夏令营首页</a>
+		</div>
+		<hr style="background-color:rgb(15,89,164);height:5px;border:none;">
+		<div class="left">
+			<ul class="first">
+				<li class="title"><a href="sqxz.html">申请须知</a></li>
+				<li class="title"><a href="personalinf.html">个人信息</a></li>
+				<li class="title"><a href="educationback.html">教育背景</a></li>
+				<li class="title"><a href="personalstate.html">个人陈述</a></li>
+				<li class="title"><a href="dataupload.html">资料上传</a></li>
+				<li class="title" style="background-color:lightblue;"><a href="recommend.html">推荐信</a></li>
+				<li class="title"><a href="promise.html">诚信承诺</a></li>
+				<li class="title"><a href="submit.html">提交申请</a></li>
+			</ul>
+		</div>
+		<div class="right">
+			(*本系统为夏令营模拟系统，部分涉及个人隐私的信息可模糊填写)<br><br>
+			<div class="rectangle-bg">
+<p style="font-weight:bold;font-size:23px;">注意事项</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、推荐人须为与报考学科相关副教授（或相当职称）及以上专家；</p>
+<p style="line-height:170%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、填写推荐人信息后，请点击“发送”按钮，系统将自动向推荐人发送推荐信邮件，点击“再次发送”按钮，系统会再次发送推荐信邮件给同意推荐人，推荐人可根据提示完成填写内容；</p>
+<p style="line-height:170%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、您可以更换推荐人，点击“更换”按钮后可重新输入推荐人信息，并给新的推荐人发送推荐邮件。请注意，推荐人提交推荐信息后将无法更换推荐人；</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、我们有可能对推荐人身份信息及内容进行核实，请确保信息真实性。</p>
+<p style="color:red;font-weight:bold;"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：本系统仅为模拟系统，不会对邮箱和推荐人进行确认操作。</p></div>
+		<table id="memberTable">
+			<tr>
+				<th>姓名</th>
+				<th>推荐人是否具有高等技术职称</th>
+				<th>性别</th>
+				<th>工作单位</th>
+				<th>职务</th>
+				<th>职称</th>
+				<th>与推荐人关系</th>
+				<th>邮箱</th>
+				<th>推荐人手机</th>
+				<th>通信地址</th>
+				<th>操作</th>
+			</tr>
+		</table>
+		<div class="dialog-container" id="dialogContainer">
+			<div class="dialog-content">
+				<label for="name">姓名:</label>
+				<input type="text" id="name"><br>
+		
+				<label for="shifou">推荐人是否具有高等技术职称:</label>
+				<input type="text" id="shifou"><br>
+		
+				<label for="sex">性别:</label><br>
+				<input type="radio" name="sex" id="sex" value="男" checked="checked">男&nbsp;
+				<input type="radio" name="sex" id="sex" value="女">女<br>
+				
+				<label for="unit">工作单位:</label>
+				<input type="text" id="unit"><br>
+				
+				<label for="zw">职务:</label>
+				<input type="text" id="zw"><br>
+				
+				<label for="zc">职称:</label>
+				<input type="text" id="zc"><br>
+				
+				<label for="gx">与推荐人关系:</label>
+				<input type="text" id="gx"><br>
+				
+				<label for="yx">邮箱:</label>
+				<input type="text" id="yx"><br>
+				
+				<label for="sj">推荐人手机:</label>
+				<input type="text" id="sj"><br>
+				
+				<label for="dz">通信地址:</label>
+				<input type="text" id="dz"><br>
+		
+				<button onclick="saveData()">确定</button>
+				<button onclick="cancelDialog()" class="cancel">取消</button>
+			</div>
+		</div>
+		<div style="display: flex; justify-content: center;margin-top:22px;">
+			<button onclick="openDialog()" style="display: flex; justify-content: center;">
+				添加推荐人
+			</button>
+		</div>
+		<br>
+		<a href="dataupload.html" class="next" style="text-decoration:none;">上一步</a>
+		<a href="#" class="next" style="text-decoration:none;">保存</a>
+		<a href="promise.html" class="next" style="text-decoration:none;">下一步</a>
+		</div>
+	</body>
+</html>

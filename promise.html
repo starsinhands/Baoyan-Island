@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			.xitong{
+				/* width: 200px; */
+				margin-top:10px;
+				margin-left:10px;
+				margin-bottom:8px;
+				height: 50px;
+				background-image: url(img/logo.png);
+				background-repeat:no-repeat;
+				background-size:contain;
+			}
+			.exit{
+				border: 1px solid rgb(15,89,164);
+				font-size: 20px;
+				/* width: 150px; */
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				border-radius: 20px;
+				color: rgb(15,89,164);
+				background-color: #F59A43;
+				transition: 2s;
+				padding: 1px 50px;
+				float:right;
+				margin-right:20px;
+			}
+			.exit:hover{
+				color: white;
+				background-color: rgb(15,89,164);
+				box-shadow: 2px 2px 10px #f96520,
+				-2px 2px 10px #D1F276,
+				2px -2px 10px #D1F276,
+				-2px -2px 10px #D1F276;
+			}
+			.left{
+				width: 200px;
+				height: 700px;
+				border: 1px solid rgb(15,89,164);
+				float: left;
+				background-color: rgb(15,89,164);
+			}
+			.right{
+				width:1150px;
+				height:500px;
+				margin-left:60px;
+				margin-top:50px;
+				/* border: 1px solid red; */
+				float: left;
+			}
+			.title{
+				list-style-type: none;
+				width: 200px;
+				height: 55px;
+				line-height: 55px;
+				border: 1px dashed black;
+				text-align: center;
+			}
+			a{
+				color: black;
+				text-decoration: none;
+				font-family: "微软雅黑";
+				font-weight: bold;
+				font-size: 20px;
+			}
+			.first{
+				margin-top:50px;
+			}
+			.first>li{
+				background-color: ghostwhite;
+			}
+			.first>li:hover{
+				background-color: skyblue;
+			}
+			.first>li a:hover{
+				color: white;
+			}
+			p{
+				font-size:18px;
+				margin-top:14px;
+			}
+			.next{
+				border: 1px solid rgb(15,89,164);
+				font-size: 20px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				color: rgb(15,89,164);
+				background-color: #F59A43;
+				transition: 2s;
+				padding: 1px 50px;
+				margin-right:100px;
+			}
+			.rectangle-bg{
+				background-color:#f2f2f2;
+				margin-left:10px;
+				margin-bottom:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="xitong">
+			<span style="margin-left: 50px;font-size: 34px;font-family: '华文新魏';font-weight: bold;height: 50px;line-height: 50px;color:rgb(15,89,164);">保研岸 | </span>
+			<span style="font-size: 29px;font-family: '幼圆';font-weight: bold;height: 50px;line-height: 50px;">模拟夏令营预申请与资格审查系统</span>
+			<a href="log.html" class="exit" style="text-decoration:none;">退&nbsp;&nbsp;&nbsp;出</a>
+			<a href="xialingyingshouye.html" class="exit" style="text-decoration:none;">夏令营首页</a>
+		</div>
+		<hr style="background-color:rgb(15,89,164);height:5px;border:none;">
+		<div class="left">
+			<ul class="first">
+				<li class="title"><a href="sqxz.html">申请须知</a></li>
+				<li class="title"><a href="personalinf.html">个人信息</a></li>
+				<li class="title"><a href="educationback.html">教育背景</a></li>
+				<li class="title"><a href="personalstate.html">个人陈述</a></li>
+				<li class="title"><a href="dataupload.html">资料上传</a></li>
+				<li class="title"><a href="recommend.html">推荐信</a></li>
+				<li class="title" style="background-color:lightblue;"><a href="promise.html">诚信承诺</a></li>
+				<li class="title"><a href="submit.html">提交申请</a></li>
+			</ul>
+		</div>
+		<div class="right">
+			(*本系统为夏令营模拟系统，部分涉及个人隐私的信息可模糊填写)<br><br>
+<div class="rectangle-bg">
+<p style="margin-bottom:10px;">请您下载&laquo;诚信承诺书&raquo;，填写完毕后将附有签名的诚信承诺书拍照或扫描后上传（上传文件仅限“pdf”格式，文件小于5M）。</p>
+</div>
+		<input type="file" style="margin-bottom:15px;">
+		<br>
+		<a href="recommend.html" class="next" style="text-decoration:none;">上一步</a>
+		<a href="#" class="next" style="text-decoration:none;">保存</a>
+		<a href="submit.html" class="next" style="text-decoration:none;">下一步</a>
+		</div>
+		
+	</body>
+</html>
